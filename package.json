@@ -1,0 +1,81 @@
+{
+  "name": "@nestjs-mcs/core",
+  "version": "1.0.0",
+  "description": "NestJS Microservice Core",
+  "author": "Truong Luu <xuantruong1234@gmail.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*",
+    "*.md"
+  ],
+  "scripts": {
+    "start:dev": "tsc -w",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "keywords": [
+    "nestjs"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^6.0.0",
+    "@nestjs/mongoose": "^6.2.1",
+    "rxjs": "^6.3.3"
+  },
+  "dependencies": {
+    "class-transformer": "^0.2.3",
+    "class-validator": "^0.10.0",
+    "nestjs-swagger-api-implicit-queries-decorator": "^1.0.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^6.0.0",
+    "@nestjs/mongoose": "^6.2.1",
+    "@nestjs/core": "^6.0.0",
+    "@nestjs/platform-express": "^6.0.0",
+    "@nestjs/swagger": "^3.1.0",
+    "@nestjs/testing": "6.1.1",
+    "@types/express": "4.16.1",
+    "@types/jest": "24.0.11",
+    "@types/mongoose": "^5.5.17",
+    "@types/node": "11.13.4",
+    "@types/request-promise": "^4.1.44",
+    "@types/supertest": "2.0.7",
+    "jest": "24.7.1",
+    "mongoose": "^5.7.1",
+    "nestjs-config": "^1.4.4",
+    "prettier": "1.17.0",
+    "rxjs": "^6.5.3",
+    "slug": "^1.1.0",
+    "supertest": "4.0.2",
+    "ts-jest": "24.0.2",
+    "ts-node": "8.1.0",
+    "tsc-watch": "2.2.1",
+    "tsconfig-paths": "3.8.0",
+    "tslint": "5.16.0",
+    "typescript": "3.4.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
