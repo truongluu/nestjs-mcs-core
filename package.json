@@ -1,6 +1,6 @@
 {
   "name": "nestjs-mcs-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NestJS Microservice Core",
   "repository": "https://github.com/truongluu/nestjs-mcs-core",
   "bugs": "https://github.com/truongluu/nestjs-mcs-core/issues",
