@@ -19,8 +19,8 @@
 Install package with yarn or npm
 
 ```bash
-yarn add @nestjs-mcs/core
-npm install @nestjs-mcs/core
+yarn add nestjs-mcs-core
+npm install nestjs-mcs-core
 ```
 
 ## Change Log
