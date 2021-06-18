@@ -3,7 +3,7 @@ import {
   Schema,
   SchemaDefinition,
   SchemaOptions
-  } from 'mongoose';
+} from 'mongoose';
 import * as slug from 'slug';
 import { BaseStatus } from '../constants/base-status';
 import { IBaseSchema } from '../interfaces/base-schema.interface';
@@ -26,7 +26,9 @@ class BaseSchema extends Schema {
     }
     this.pre<IBaseSchema>('save', async function (next) {
       try {
-        this.slugName = slug(this.name, { lowercase: true });
+        if (this.name) {
+          this.slugName = slug(this.name, { lowercase: true });
+        }
         next();
       } catch (err) {
         next(err);
